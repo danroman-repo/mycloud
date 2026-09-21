@@ -1,0 +1,15 @@
+[0;1;32m●[0m mycloud.service - My Cloud Gunicorn application
+     Loaded: loaded (/etc/systemd/system/mycloud.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Sat 2026-07-18 15:20:08 MSK; 3s ago
+   Main PID: 25554 (gunicorn)
+      Tasks: 1 (limit: 1138)
+     Memory: 11.2M
+     CGroup: /system.slice/mycloud.service
+             └─25554 /home/mycloud/mycloud/backend/venv/bin/python3 /home/mycloud/mycloud/backend/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/mycloud.sock my_cloud.wsgi:application
+
+Jul 18 15:20:08 localhost systemd[1]: Started My Cloud Gunicorn application.
+Jul 18 15:20:08 localhost gunicorn[25554]: [2026-07-18 15:20:08 +0300] [25554] [INFO] Starting gunicorn 21.2.0
+Jul 18 15:20:08 localhost gunicorn[25554]: [2026-07-18 15:20:08 +0300] [25554] [ERROR] Retrying in 1 second.
+Jul 18 15:20:09 localhost gunicorn[25554]: [2026-07-18 15:20:09 +0300] [25554] [ERROR] Retrying in 1 second.
+Jul 18 15:20:10 localhost gunicorn[25554]: [2026-07-18 15:20:10 +0300] [25554] [ERROR] Retrying in 1 second.
+Jul 18 15:20:11 localhost gunicorn[25554]: [2026-07-18 15:20:11 +0300] [25554] [ERROR] Retrying in 1 second.
